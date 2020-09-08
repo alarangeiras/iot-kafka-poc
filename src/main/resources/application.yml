@@ -1,0 +1,21 @@
+aruba:
+  websocket:
+    url: "wss://app.central.arubanetworks.com/streaming/api"
+    username: "mauricio.santos@mobicare.com.br"
+    authorization: "eyJhbGciOiJIUzI1NiIsInR5cGUiOiJqd3QifQ.eyJjdXN0b21lcl9pZCI6Ijg5NTA4NGQ5NTcxYzQzZTNiYWRjNWJlZDYxMDRlM2I3IiwiQ3JlYXRlZCI6MTU5OTIyMzc2N30.M6N7Z7vNjNKWos3eNUGWxnA37X9lf6Gq0jCvmNOI6zk"
+    topic: "presence"
+
+topics:
+  presence: "mcare-apolo-stream-presence"
+
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: "44.236.11.42:9092,52.12.90.215:9092"
+    consumer:
+      bootstrap-servers: "44.236.11.42:9092,52.12.90.215:9092"
+      group-id: "mcare-apolo-kafka-poc"
+      auto-offset-reset: "earliest"
+  mvc:
+    converters:
+      preferred-json-mapper: gson
